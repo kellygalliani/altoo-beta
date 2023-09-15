@@ -79,7 +79,7 @@ export const initProjects: Omit<Project, "url">[] = [
   }
 ];
 
-export const categories = ["Sites", "Aplicativos", "Integrações", "SEO"];
+export const categories = ["Sites", "Aplicativos"];
 
 export const aplications = {
   title: "Serviço de Criação de Aplicativos:",
