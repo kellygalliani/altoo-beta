@@ -1,0 +1,51 @@
+---
+import banneraltoo from "../../../assets/banner-altoo.svg";
+import Button from "@/components/Button";
+
+const options = [
+  ["Como funciona?", "#howItWorks"],
+  ["Projetos", "#projects"],
+  ["Serviços", "#services"],
+  ["Sobre nós", "#about"]
+];
+---
+
+<header
+  class="w-full relative z-20 px-12 py-6 flex items-center justify-center lg:justify-between bg-gradient-to-b from-primary-700 to-grey-700"
+>
+  <div class="container">
+    <img src={banneraltoo} alt="logo" class="object-scale-down w-40" />
+  </div>
+  <nav
+    class="container h-10 flex items-center justify-center gap-5 sm:flex-row-reverse lg:flex-row"
+    id="navBurger"
+  >
+    <div class="px-4 cursor-pointer lg:hidden">
+      <svg
+        class="w-7"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        stroke="#DDF9F6"
+        viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg
+      >
+    </div>
+    <ul
+      class="hidden m-[40px] p-6 bg-gradient-to-b from-grey-300 to-primary-700/60 rounded-md shadow-lg shadow-primary-700/50 lg:shadow-transparent text-white lg:bg-none absolute lg:static lg:m-0 top-12 right-0 lg:flex lg:flex-row text-sm items-center gap-5 whitespace-nowrap"
+      id="navMenu"
+    >
+      {
+        options.map(([title, href]) => (
+          <li class="px-4 py-2 hover:bg-white/30 transition ease-linear duration-300 rounded-md">
+            <a href={href}>{title}</a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <Button className="btn-outline-second w-40 py-2 whitespace-nowrap">Entre em contato</Button>
+  </nav>
+</header>
+
+<script src="./index.js"></script>

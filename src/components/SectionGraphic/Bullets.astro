@@ -1,0 +1,17 @@
+---
+import Typography from "../Typography";
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const { title, icon, description } = Astro.props as Props;
+---
+
+<li class="w-[95%] max-w-md flex flex-col justify-center items-center gap-6">
+  <iconify-icon icon={icon} class="text-secondary-200 text-4xl font-light"></iconify-icon>
+  <Typography variant="h3">{title}</Typography>
+  <Typography variant="body" className="text-justify w-[90%]">{description}</Typography>
+</li>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>

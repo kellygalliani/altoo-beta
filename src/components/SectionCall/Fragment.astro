@@ -1,0 +1,16 @@
+---
+interface Props {
+  reverse?: boolean;
+  bg?: string;
+}
+
+const { reverse, bg } = Astro.props as Props;
+---
+
+<section class=`${bg}`>
+  <div
+    class=`flex justify-between items-center gap-8 flex-col sm:flex-row w-full max-w-6xl m-0 mx-auto px-5 py-9 ${reverse ? "sm:flex-row-reverse" : ""}`
+  >
+    <slot />
+  </div>
+</section>

@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #f8fafc;
+    color: #333;
+  }
+  h1 {
+    @apply font-bold text-3xl md:text-5xl;
+  }
+
+  h2 {
+    @apply font-semibold text-2xl md:text-4xl;
+  }
+  h3 {
+    @apply font-semibold text-xl md:text-3xl;
+  }
+  h4 {
+    @apply font-semibold text-lg md:text-2xl;
+  }
+  h5 {
+    @apply font-semibold text-base md:text-xl;
+  }
+  h6 {
+    @apply font-medium text-sm md:text-lg;
+  }
+  p {
+    @apply font-normal text-xs md:text-base;
+  }
+  span {
+    @apply font-normal text-xs md:text-base;
+  }
+  a {
+    @apply no-underline;
+  }
+  ul {
+    @apply list-none;
+  }
+}
+
+@layer components {
+  .button-nav {
+    @apply border-2 rounded-md hover:rounded-full hover:bg-primary-100 hover:border-primary-100 px-3 py-1 text-gray-500 hover:text-white transition-all ease-in-out duration-500;
+  }
+
+  .container-card-project {
+    @apply w-full max-h-[600px]  lg:w-fit  flex  gap-6 pb-2 lg:pb-10  lg:pr-2  lg:grid  lg:grid-cols-1  
+    overflow-auto scrollbar  scrollbar-w-1  scrollbar-h-1  scrollbar-track-rounded-md  scrollbar-track-slate-200  scrollbar-thumb-rounded-md  scrollbar-thumb-primary-300;
+  }
+
+  .card-project {
+    @apply relative w-[250px] min-w-[250px] h-[250px] min-h-[250px] overflow-hidden rounded-xl cursor-pointer bg-slate-950 shadow-card;
+  }
+
+  .btn-primary {
+    @apply  bg-primary-600 border-primary-600 text-gray-100 hover:bg-primary-100 hover:border-primary-100 hover:text-white duration-300;
+  }
+
+  .btn-second {
+    @apply bg-secondary-100 border-secondary-100 hover:bg-secondary-600 hover:border-secondary-600 text-secondary-700 hover:text-white;
+  }
+
+  .btn-outline-primary {
+    @apply border-primary-700 bg-transparent hover:bg-primary-700 text-primary-700 hover:text-white;
+  }
+
+  .btn-outline-second{
+    @apply border-secondary-100 hover:border-white bg-transparent text-secondary-100 hover:text-white;
+  }
+}
+
+:root {
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  line-height: 2;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}

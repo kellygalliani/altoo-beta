@@ -1,0 +1,26 @@
+---
+import Call from "./Call.astro";
+import Fragment from "./Fragment.astro";
+import MascotFly from "../Mascot/MascotFly.astro";
+import MascotFloor from "../Mascot/MascotFloor.astro";
+---
+
+<section>
+  <Fragment>
+    <h3 class="font-bold max-w-md">
+      Você tem uma ideia incrível para um <strong class="text-primary-400"
+        >SaaS</strong
+      >, mas não sabe por onde começar?
+    </h3>
+    <MascotFly />
+  </Fragment>
+  <Fragment reverse bg="bg-green-50">
+    <h3 class="font-bold max-w-md">
+      Ou talvez sua empresa ainda não tenha uma <strong class="text-primary-400"
+        >presença online</strong
+      > forte?
+    </h3>
+    <MascotFloor />
+  </Fragment>
+  <Call />
+</section>

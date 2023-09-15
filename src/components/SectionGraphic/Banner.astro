@@ -1,0 +1,24 @@
+---
+import Button from "../Button";
+
+import Typography from "../Typography";
+interface Props {
+  img: string;
+}
+
+const { img } = Astro.props as Props;
+---
+
+<div
+  class="w-[95%] mb-24 m-auto bg-primary-700/10 flex flex-nowrap justify-between items-center rounded-3xl p-11 md:px-11 lg:px-28"
+>
+  <div class="flex flex-col gap-11">
+    <Typography variant="h2">Não seja uma relíquia</Typography>
+    <Typography variant="body" className="max-w-xl">
+      Um site ou aplicativo é o seu passaporte para o futuro, mantendo sua empresa atualizada na era
+      digital.
+    </Typography>
+    <Button className="btn-primary w-full sm:max-w-md">Quero meu site!</Button>
+  </div>
+  <img src={img} alt="banner" class="hidden md:block w-full max-w-sm lg:flex" />
+</div>

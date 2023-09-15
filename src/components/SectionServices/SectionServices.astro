@@ -1,0 +1,64 @@
+---
+import CustomizedAccordions from "./Astro";
+import Steps from "../../assets/steps.png";
+import Typography from "../Typography";
+
+const strategies = [
+  {
+    title: "Definição de Objetivos",
+    description:
+      "Antes de começar a criar um site, é importante definir quais são os objetivos do site e como ele pode ajudar a atingir os objetivos de negócio da empresa. Também é importante definir claramente a proposta de valor do site, ou seja, o que ele oferece aos visitantes que os diferencia dos concorrentes."
+  },
+  {
+    title: "Planejamento e Escolha das Tecnologias",
+    description:
+      "Depois de definir os objetivos e a proposta de valor, é importante planejar como o site será estruturado, quais tecnologias serão utilizadas, quais páginas ele terá, quais informações serão incluídas em cada página e como o conteúdo será organizado."
+  },
+  {
+    title: "Design e Desenvolvimento",
+    description:
+      "O próximo passo é criar o design do site, levando em consideração a identidade visual da empresa e as preferências do público-alvo. Depois que o design estiver pronto, é hora de desenvolver o site, codificando-o e adicionando funcionalidades."
+  },
+  {
+    title: "Testes e Otimização de SEO",
+    description:
+      "Antes de lançar o site, é importante testá-lo para garantir que tudo esteja funcionando corretamente. Também realizamos a otimização de SEO seguindo as melhores práticas para garantir que o seu site seja facilmente encontrado pelo seu público-alvo."
+  },
+  {
+    title: "Lançamento e Suporte Contínuo",
+    description:
+      "Depois que todos os testes forem concluídos com sucesso, o site pode ser lançado. Após o lançamento, é importante oferecer suporte aos usuários para garantir que eles tenham uma experiência positiva. Isso pode incluir a resolução de problemas técnicos, a atualização regular do conteúdo e a implementação de melhorias com base no feedback dos usuários."
+  }
+];
+---
+
+<div class="bg-gray-300/20 py-28">
+  <section class="container flex flex-col justify-center items-center mb-20 gap-24" id="howItWorks">
+    <div class="flex flex-col justify-center items-center gap-3">
+      <Typography variant="h2" className="text-center">
+        Contrate nossos serviços de forma simples
+      </Typography>
+      <Typography variant="body" className="text-center">
+        Transforme sua ideia em um projeto real com nossos cinco passos simples. Estamos aqui para
+        ajudá-lo em cada etapa do caminho.
+      </Typography>
+    </div>
+
+    <div class="flex w-full max-w-6xl gap-5 justify-center items-center relative">
+      <ul class="w-full flex flex-col gap-11">
+        {
+          strategies.map((strategy, i) => (
+            <>
+              <CustomizedAccordions
+                title={strategy.title}
+                description={strategy.description}
+                index={i}
+                client:only
+              />
+            </>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</div>

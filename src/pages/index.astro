@@ -1,0 +1,24 @@
+---
+import SectionInit from "../components/SectionInit/SectionInit.astro";
+import SectionCall from "../components/SectionCall/SectionCall.astro";
+import SectionExplore from "../components/SectionExplore/SectionExplore";
+import SectionProjects from "../components/SectionProjects/SectionProjects.astro";
+import SectionGraphic from "../components/SectionGraphic/SectionGraphic.astro";
+import SectionServices from "../components/SectionServices/SectionServices.astro";
+import Layout from "../layouts/Layout.astro";
+
+
+---
+
+<Layout>
+  <div class="w-full overflow-x-hidden">
+    <SectionInit />
+    <SectionCall />
+    <div class="container mx-auto font-poppins px-2">
+      <SectionExplore client:only/>
+      <SectionGraphic />
+      <SectionProjects />
+    </div>
+    <SectionServices />
+  </div>
+</Layout>

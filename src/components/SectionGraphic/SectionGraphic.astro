@@ -1,0 +1,108 @@
+---
+import Graphic91 from "../../assets/graphic-97.svg";
+import Graphic97 from "../../assets/graphic-91.svg";
+import Graphic68 from "../../assets/graphic-68.svg";
+import Graphic50 from "../../assets/graphic-50.svg";
+import BannerImg from "../../assets/community.webp.png";
+import Bullets from "./Bullets.astro";
+import Banner from "./Banner.astro";
+import Typography from "../Typography";
+
+const bullets = [
+  {
+    icon: "akar-icons:statistic-up",
+    title: "Foco na performance",
+    description:
+      "Foco em performance significa otimizar o site para carregar rapidamente, proporcionando uma experiência ágil e agradável aos usuários, o que melhora a classificação nos motores de busca e aumenta as chances de conversão."
+  },
+  {
+    icon: "solar:tag-price-bold-duotone",
+    title: "Custo Acessível",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veritatis dolorem facilis aspernatur recusandae exercitationem!"
+  },
+  {
+    icon: "icon-park-outline:seo",
+    title: "SEO de ponta",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veritatis dolorem facilis aspernatur recusandae exercitationem!"
+  }
+];
+---
+
+<section class="flex flex-col items-center justify-center gap-24 w-full mt-6 mb-24">
+  <div class="flex flex-col gap-24 mt-16 mb-16 max-w-5xl justify-center items-center">
+    <Typography variant="h2" className="text-center">
+      Dê uma olhada <span class="text-violet-700 text-4xl font-bold">360º</span> no mundo dos negócios
+    </Typography>
+
+    <div class="flex flex-col w-full lg:flex-row text-center items-center justify-center gap-5">
+      <div class="w-full flex justify-start">
+        <div class="w-full max-w-xs flex flex-col gap-16">
+          <div class="w-full flex flex-col justify-center text-right">
+            <div class="w-full flex justify-center">
+              <img src={Graphic91} class="w-44" alt="graphic97" />
+            </div>
+            <p class="font-poppins">
+              <span class="text-2xl font-semibold font-poppins">91%</span>das pessoas visitaram uma
+              loja depois de interagir com um site online.
+            </p>
+          </div>
+          <div class="max-w-sm flex justify-center text-right">
+            <div class="w-full flex justify-center">
+              <img src={Graphic97} class="w-16" alt="graphic97" />
+            </div>
+            <p class="font-poppins">
+              <span class="text-2xl font-semibold font-poppins">97%</span>das pessoas descobrem
+              empresas online.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative hidden lg:block">
+        <canvas class="globe"></canvas>
+      </div>
+
+      <div class="w-full flex justify-end mt-8 lg:my-0">
+        <div class="w-full max-w-xs flex flex-col gap-16">
+          <div class="flex flex-row-reverse justify-center text-left">
+            <img src={Graphic68} class="w-16" alt="graphic97" />
+            <p class="font-poppins">
+              <span class="text-2xl font-semibold font-poppins">68%</span>das empresas que têm site
+              mobile aumentam o faturamento.
+            </p>
+          </div>
+          <div class="flex flex-col justify-center text-left">
+            <div class="w-full flex justify-center">
+              <img src={Graphic50} class="w-44" alt="graphic97" />
+            </div>
+
+            <p class="font-poppins">
+              <span class="text-2xl font-semibold font-poppins">50%</span>dos usuários da internet
+              usam o design do site para formar opinião sobre a marca.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="w-full flex flex-col justify-center items-center gap-6 lg:flex-row">
+    {
+      bullets.map((bullet) => (
+        <Bullets title={bullet.title} icon={bullet.icon} description={bullet.description} />
+      ))
+    }
+  </ul>
+</section>
+
+<Banner img={BannerImg} />
+
+<style>
+  .globe {
+    background: radial-gradient(circle at center, #7f00ff 0%, transparent 53%);
+  }
+</style>
+
+<script src="./index.js"></script>
