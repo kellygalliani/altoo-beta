@@ -49,8 +49,8 @@ const SectionExplore = () => {
           ))}
         </ul>
       </nav>
-      <div className="flex flex-col justify-center items-center lg:items-start lg:flex-row lg:justify-between lg:ml-8">
-        <div className=" w-[98%] lg:w-[70%]">
+      <div className="flex flex-col justify-center items-center">
+        <div className="max-w-4xl">
           {categorySelected == "Sites" && (
             <ContentByCategory.Root className="flex flex-col gap-7">
               <ContentByCategory.Title title={websites.title} className="text-center text-2xl" />
@@ -261,7 +261,7 @@ const SectionExplore = () => {
             </ContentByCategory.Root>
           )}
         </div>
-        <div>
+        {/* <div>
           <ul
             className="container-card-project lg:pl-20  
           ">
@@ -283,7 +283,7 @@ const SectionExplore = () => {
                 )
             )}
           </ul>
-        </div>
+        </div> */}
       </div>
     </section>
   );
