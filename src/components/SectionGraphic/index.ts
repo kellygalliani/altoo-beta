@@ -1,10 +1,11 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import globo from "../../assets/3.png";
 
 const scene = new THREE.Scene();
 
 const textureLoader = new THREE.TextureLoader();
-const worldMapTexture = textureLoader.load("3.png");
+const worldMapTexture = textureLoader.load(globo);
 
 const geometry = new THREE.SphereGeometry(3, 64, 64);
 const material = new THREE.MeshStandardMaterial({
@@ -17,7 +18,7 @@ const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
-ambientLight.intensity = 0.8;
+ambientLight.intensity = 2.8;
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(0x7f00ff);
